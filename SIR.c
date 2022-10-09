@@ -149,10 +149,12 @@ int main()
     }
     noOfInitInf=r;
     puts("");
-  }else{
+  }
+  else if(choice!=-1){
+    already_infected = (int*)malloc(choice*sizeof(int));
     printf("\nEnter the IDs of %d Initial Infected Vertices :",choice); //Ask user for number of initial infecteds.
     for(int i=0;i<choice;i++){
-      int input;
+      int input=7;
       scanf(" %d",&input);
       if(input<0 ||input>=noOfVert){ //Check if the input is in the range or not
         printf("Invalid Input, Please Enter a Number Between %d and %d",0,noOfVert-1); //Print error message
@@ -166,6 +168,7 @@ int main()
         }
       }
     }
+    
     noOfInitInf=choice;
   }
 
